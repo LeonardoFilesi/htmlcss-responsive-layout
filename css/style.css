@@ -10,6 +10,7 @@ header {
     background-color: rgb(28, 118, 253);
     width: 100%;
     height: 90px;
+    padding: 10px;
 }
 
 /****************************************
@@ -116,7 +117,13 @@ END 1rst section
 }
 
 /****************************************
-2nd section
+end 2nd section
+*****************************************/
+
+
+
+/****************************************
+3rd section
 *****************************************/
 
 .section3 .card {
@@ -141,13 +148,56 @@ END 1rst section
 }
 
 /****************************************
+3rd section
+*****************************************/
+
+
+
+/****************************************
+4rth section
+*****************************************/
+
+.section4 .card {
+    background-color: white;
+    color: rgb(78, 74, 74);
+}
+
+.section4 h2, .section4 h3 {
+    color: rgb(131, 143, 255);
+}
+
+.section4 .button {
+    background-color: rgb(131, 143, 255);
+    color: white;
+}
+
+/****************************************
+end 4rth section
+*****************************************/
+
+
+/****************************************
+5th section
+*****************************************/
+
+.section5 h2, .section5 h3 {
+    color: rgb(131, 143, 255);
+}
+
+/****************************************
+end 5th section
+*****************************************/
+
+
+
+/****************************************
 SOLUZIONE RESPONSIVE
 *****************************************/
 
 
 @media all and (min-width: 768px;) {
 
-    .section1 {
+    .section1, .section3 .card, .section4 {
         flex-direction: row;
     }
     .section1 .first-card {
@@ -158,17 +208,21 @@ SOLUZIONE RESPONSIVE
         width: calc(100% / 3);
     }
 
-    .section3 .card {
-        flex-direction: row;
-    }
-
     .section3 .img-container {
         width: 20%;
+    }
+
+    .section4 .card {
+        width: calc(100% / 2);
     }
 }
 
 @media all and (min-width: 992px;) {
     
+    .container {
+        width: 60%;
+    }
+
 }
 
 @media all and (min-width: 1200px;) {
