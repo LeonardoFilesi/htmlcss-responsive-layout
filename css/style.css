@@ -6,17 +6,21 @@
     border: 1px solid red;
 }
 
-header {
-    background-color: rgb(28, 118, 253);
-    width: 100%;
-    height: 90px;
-    padding: 10px;
+/* ROOT */
+
+:root {
+    --lilla:rgb(#9792e4);
+    --blue:rgb(#0084fd);
+    --grey:rgb(#5b6f81);
 }
+
+
 
 /****************************************
 COMMON
 *****************************************/
 
+/* structure */
 .flex {
     display: flex;
 }
@@ -29,20 +33,11 @@ COMMON
     width: 100%;
 }
 
-.white {
-    background-color: white;
-    color: black;
-}
-
-.lilla {
-    background-color: rgb(131, 143, 255);
-    color: white;
-}
-
 .container {
     width: 95%;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 2rem 0;
+    height: 100%;
 }
 
 .card {
@@ -51,10 +46,23 @@ COMMON
     padding: 20px;
 }
 
+/* background colors */
+.white {
+    background-color: white;
+    color: black;
+}
+
+.lilla {
+    background-color: var(--lilla);
+    color: white;
+}
+
+/* items */
+
 .button {
     border-radius: 40px;
     padding: 15px;
-    margin: 15px 0;
+    margin: 0 auto;
 }
 
 img {
@@ -66,26 +74,56 @@ p {
 }
 
 h3 {
-    color: rgb(28, 118, 253);
+    color: var(--blue);
     padding: 10px 0;
 }
+
+/****************************************
+end COMMON
+*****************************************/
+
+
+
+/****************************************
+header
+*****************************************/
+
+header {
+    background-color: var(--blue);
+    width: 100%;
+    height: 90px;
+    padding: 10px 0;
+    color: white;
+}
+
+header .container {
+    justify-content: space-between;
+    align-content: center;
+}
+
+/****************************************
+end header
+*****************************************/
+
+
 
 /****************************************
 1rst-section
 *****************************************/
 
-.section1 {
-
+.section1 .container {
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .section1 .card {
-    background-color: rgb(130, 199, 255);
+    background-color: #b5ddff;
     margin: 0 auto;
     color: rgb(78, 74, 74);
 }
 
 .section1 .button {
-    background-color: rgb(28, 118, 253) ;
+    background-color: #0084fd;
     color: white;
 }
 
@@ -103,12 +141,12 @@ END 1rst section
 }
 
 .section2 .button {
-    background-color: rgb(131, 143, 255) ;
+    background-color: #9792e4 ;
     color: black;
 }
 
 .section2 .transparent {
-    background-color: rgb(131, 143, 255) ;
+    background-color: #9792e4 ;
     color: white;
 }
 
@@ -127,7 +165,7 @@ end 2nd section
 *****************************************/
 
 .section3 .card {
-    background-color: rgb(131, 143, 255);
+    background-color: #9792e4;
     color: white;
 }
 
@@ -140,11 +178,12 @@ end 2nd section
 }
 
 .section3 .trasnparent h3 {
-    color: rgb(131, 143, 255) ;
+    color: #9792e4 ;
 }
 
-.section3 .img-container {
-    border-radius: 40px;
+.section3 .img-container img {
+    border-radius: 100px;
+    width: 100%;
 }
 
 /****************************************
@@ -163,11 +202,11 @@ end 2nd section
 }
 
 .section4 h2, .section4 h3 {
-    color: rgb(131, 143, 255);
+    color: #9792e4;
 }
 
 .section4 .button {
-    background-color: rgb(131, 143, 255);
+    background-color: #9792e4;
     color: white;
 }
 
@@ -181,7 +220,11 @@ end 4rth section
 *****************************************/
 
 .section5 h2, .section5 h3 {
-    color: rgb(131, 143, 255);
+    color: #9792e4;
+}
+
+.section5 img {
+    border-radius: 100px;
 }
 
 /****************************************
@@ -195,36 +238,14 @@ SOLUZIONE RESPONSIVE
 *****************************************/
 
 
-@media all and (min-width: 768px;) {
+@media screen and (min-width: 768px;) {
 
-    .section1, .section3 .card, .section4 {
-        flex-direction: row;
-    }
-    .section1 .first-card {
-        width: calc(67%);
-    }
-
-    .section1 .card {
-        width: calc(100% / 3);
-    }
-
-    .section3 .img-container {
-        width: 20%;
-    }
-
-    .section4 .card {
-        width: calc(100% / 2);
-    }
 }
 
-@media all and (min-width: 992px;) {
+@media screen and (min-width: 992px;) {
     
-    .container {
-        width: 60%;
-    }
-
 }
 
-@media all and (min-width: 1200px;) {
+@media screen and (min-width: 1200px;) {
     
 }
